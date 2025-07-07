@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -37,7 +37,7 @@
 
 <script>
 const tools = [
-  { title: "EX4 Unpacker Pro", desc: "Decompile and analyze EX4 (MetaTrader) files to recover source code.", price: "$70", file: "files/EX4_Unpacker_Pro.zip", pass: "EX4Unpacker123", review: "⭐️⭐️⭐️⭐️⭐️ Helped me recover my lost EA code." },
+  { title: "EX4 Unpacker Pro", desc: "Decompile and analyze EX4 (MetaTrader) files to recover source code.", price: "$60", file: "files/EX4_Unpacker_Pro.zip", pass: "EX4Unpacker123", review: "⭐️⭐️⭐️⭐️⭐️ Helped me recover my lost EA code." },
   { title: "APK Analyzer Pro", desc: "Inspect and extract APK files, analyze app structure, and explore Android apps.", price: "$100", file: "files/APK_Analyzer_Pro.zip", pass: "ApkAnalyzerPro123", review: "⭐️⭐️⭐️⭐️⭐️ Excellent tool for app analysis!" },
   { title: "GameMod Builder", desc: "Create modded versions of Android/PC games by injecting new behavior.", price: "$75", file: "files/GameMod_Builder.zip", pass: "GameModBuilder123", review: "⭐️⭐️⭐️⭐️ Easy to use and powerful." },
   { title: "Phone SpyX Viewer", desc: "Monitor SMS, calls, and location logs from remote devices.", price: "$100", file: "files/Phone_SpyX_Viewer.zip", pass: "SpyXViewer123", review: "⭐️⭐️⭐️⭐️ Used for tracking corporate devices." },
@@ -48,17 +48,15 @@ const tools = [
   { title: "iOS Decompiler", desc: "Reverse iOS apps to extract and view source logic from binaries.", price: "$120", file: "files/iOS_Decompiler.zip", pass: "iOSDecompiler123", review: "⭐⭐⭐⭐ Powerful tool for mobile analysis." },
   { title: "Unity Dumper", desc: "Dump Unity3D game files and extract assets or logic for analysis or modding.", price: "$75", file: "files/Unity_Dumper.zip", pass: "UnityDump123", review: "⭐⭐⭐⭐⭐ Essential for Unity reverse engineering!" },
   { title: "Browser Cookie Extractor", desc: "Extract login sessions and cookies from browsers for session reuse or analysis.", price: "$70", file: "files/Browser_Cookie_Extractor.zip", pass: "CookieExtract123", review: "⭐⭐⭐⭐ Helped me recover saved sessions easily." },
-  { title: "Account Deleter v2", desc: "Automate account removal on multiple platforms with precision.", price: "$60", file: "files/Account_Deleter_v2.zip", pass: "AccDeleter123", review: "⭐️⭐️⭐️⭐️ Helped me clean up old accounts." },
-  { title: "DLL Injection Kit", desc: "Inject custom DLLs into Windows apps for modding or debugging.", price: "$85", file: "files/DLL_Injection_Kit.zip", pass: "DLLInject123", review: "⭐️⭐️⭐️⭐️⭐️ Perfect for cheat developers." },
-  { title: "GeoIP Tracker", desc: "Trace IP addresses to their geolocation and ISP metadata.", price: "$80", file: "files/GeoIP_Tracker.zip", pass: "GeoIPTrack123", review: "⭐️⭐️⭐️⭐️ Helped in network tracking jobs." },
-  { title: "Crypto Wallet Profiler", desc: "Analyze Ethereum/BTC wallets, token movements, and NFT activity.", price: "$150", file: "files/Crypto_Wallet_Profiler.zip", pass: "WalletProfile123", review: "⭐️⭐️⭐️⭐️⭐️ Accurate and visual reports." }
+  { title: "Account Deleter v2", desc: "Automate account removal on multiple platforms with precision.", price: "$50", file: "files/Account_Deleter_v2.zip", pass: "AccDeleter123", review: "⭐️⭐️⭐️⭐️ Helped me clean up old accounts." },
+  { title: "DLL Injection Kit", desc: "Inject custom DLLs into Windows apps for modding or debugging.", price: "$85", file: "files/DLL_Injection_Kit.zip", pass: "DLLInject123", review: "⭐️⭐️⭐️⭐️⭐️ Perfect for cheat developers." }
 ];
 
 function renderTools() {
   const container = document.getElementById('tools-container');
   tools.forEach((tool, index) => {
     const id = 'tool-' + index;
-    const html = `
+    const html = 
       <div class="tool">
         <h2>${tool.title}</h2>
         <p class="description">${tool.desc}</p>
@@ -67,11 +65,11 @@ function renderTools() {
         <p class="payment-info">💳 PayPal | 🪙 Crypto | 🎁 Gift Cards</p>
         <input type="password" placeholder="Enter PIN" id="pin-${id}" />
         <p id="error-${id}" style="color:red; display:none;">❌ Incorrect PIN</p>
-        <a class="download-btn" id="dl-${id}" href="${tool.file}" download style="display:none;">✅ Download</a>
+        <a class="download-btn" id="dl-${id}" href="${tool.file}" style="display:none;" download>✅ Download</a>
         <button class="download-btn" onclick="unlock('${id}', '${tool.pass}')">🔐 Unlock</button>
         <p class="review">${tool.review}</p>
       </div>
-    `;
+    ;
     container.innerHTML += html;
   });
 }
@@ -100,16 +98,4 @@ renderTools();
 </body>
 </html>
 
-  }
-}
 
-renderTools();
-</script>
-
-<footer>
-  <p>&copy; 2025 Smithy Tools | Contact on Telegram: 
-    <a href="https://t.me/smithydeveloper" target="_blank" style="color:white;">@smithydeveloper</a>
-  </p>
-</footer>
-</body>
-</html>
